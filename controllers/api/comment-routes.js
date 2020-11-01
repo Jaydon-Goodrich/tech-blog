@@ -25,4 +25,17 @@ router.post('/', (req, res) => {
         });
 });
 
+router.delete('/:id', (req, res) => {
+    Comment.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(resData => res.json(resData))
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        });
+});
+
 module.exports = router;
