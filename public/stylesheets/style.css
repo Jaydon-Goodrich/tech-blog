@@ -60,3 +60,29 @@ button {
     border-radius: 5px;
     padding: 5px;
 }
+.single-card{
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: #73ACD2;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 10px 10px 5px grey;
+    margin: 10px;
+    text-align: center;
+}
+.comment {
+    padding: 10px;
+    font-size: 120%;
+    border-width: 1px;
+    border-style: solid;
+    margin:2px;
+    width: 50%;
+    border-radius: 10px;
+}
+.comment-user{
+    font-size: 70%;
+}
+#comment-textarea{
+    width: 50%;
+}

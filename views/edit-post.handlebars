@@ -1,0 +1,48 @@
+<article>
+    <h2>Edit Post</h2>
+    <form class="edit-post-form">
+        <div>
+            <h4>Title:</h4>
+            <input name="post-title" type="text" value="{{post.title}}" />
+        </div>
+        <div>
+            <h4>Content:</h4>
+            <textarea name="post-content">{{post.content}}</textarea>
+        </div>
+        <div>
+            by you on {{format_date post.created_at}}
+        </div>
+        <button type="submit">Save post</button>
+        <button type="button" class="delete-post-btn">Delete post</button>
+    </form>
+</article>
+
+<br>
+
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit">add comment</button>
+    </div>
+</form>
+
+<div class="comments">
+    {{#each post.comments}}
+    <section class="comment">
+        <div class="comment-user">
+            {{user.username}} on {{format_date created_at}}
+        </div>
+        <div class="text">
+            {{comment_text}}
+        </div>
+    </section>
+    {{/each}}
+</div>
+
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>
