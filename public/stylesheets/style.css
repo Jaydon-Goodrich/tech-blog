@@ -53,3 +53,10 @@ footer {
     padding: 1%;
     font-size: 110%;
 }
+
+button {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+}
